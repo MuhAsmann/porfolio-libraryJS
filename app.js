@@ -1,11 +1,5 @@
 const nav = document.querySelector(".nav");
 
-let typed = new Typed(".typing",{
-    strings:["A Creative Freelancer & Full Stack Developer"],
-    typeSpeed:100,
-    BackSpeed:60,
-    loop:true
-})
 
 window.addEventListener("scroll", () => {
     //ketika user scrol dari atas kebawah 80px maka jalankan
