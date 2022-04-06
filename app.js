@@ -13,3 +13,13 @@ window.addEventListener("scroll", () => {
         // document.getElementById("logo").style.fontSize = "35px";
       }
 });
+
+// ======= AOS LIBRARY =============
+AOS.init({
+  once:true,
+});
+
+
+// ================ GSAP LIBRARY ==============
+gsap.from(".main-img", {duration: 1.5, y: -100, opacity: 0, ease: "bounce" });
+gsap.from(".main-text h1", {duration: 1, x:-50, opacity:0, delay:0.5, ease:"back"});
