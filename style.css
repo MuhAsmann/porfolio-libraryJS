@@ -16,6 +16,7 @@ body{
 /* ====================Header=============== */
 section{
     padding: 20px 5%;
+    height: 100vh;
 }
 .header{
     height: 100vh;
@@ -302,6 +303,7 @@ i.fa-bars{
 
 @media only screen and (min-width:480px) {
     /* tampilan hanphone */ 
+
 }
 
 @media only screen and (min-width:600px){
@@ -325,9 +327,9 @@ i.fa-bars{
         width: 90%;
     }
     .container .about-content .about-detail{
-        line-height: 1.5;
+        line-height: 1.1;
         gap: 4px;
-        width: 90%;
+        width: 100%;
         padding: 5px;
     }
     .container .about-content .about-detail span{
@@ -335,6 +337,20 @@ i.fa-bars{
     }
     .container .about-content .about-detail p{
         font-size: 13px;
+    }
+    .service .service-cardItem{
+        margin-top: 20px;
+        padding: 10px 20px;
+        height: 280px;
+    }
+    .service .service-cardItem i{
+        font-size: 20px;
+    }
+    .service .service-cardItem h3{
+        font-size: 14px;
+    }
+    .service .service-cardItem p{
+        font-size: 12px;
     }
 }
 
@@ -379,6 +395,25 @@ i.fa-bars{
         width: 150px;
         height: 3px;
         bottom:0;
+    }
+    .service .service-cardItem{
+        margin-top: 20px;
+        padding: 10px 20px;
+        height: 300px;
+    }
+    .service .service-cardItem{
+        margin-top: 20px;
+        padding: 40px 20px;
+        height: 280px;
+    }
+    .service .service-cardItem i{
+        font-size: 40px;
+    }
+    .service .service-cardItem h3{
+        font-size: 18.72px
+    }
+    .service .service-cardItem p{
+        font-size: 16px;
     }
     
 }

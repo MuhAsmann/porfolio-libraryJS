@@ -89,4 +89,8 @@ const toggle = document.querySelector(".fa-bars");
 
 toggle.addEventListener("click",function () {
   nav.classList.toggle("on");
+});
+
+window.addEventListener("scroll", () => {
+  nav.classList.remove("on");
 })
