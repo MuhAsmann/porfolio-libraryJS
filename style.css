@@ -46,8 +46,14 @@ section{
     flex: 0 0 10%;
     z-index: 999;
 }
+
+
 i.fa-bars{
     display: none;
+    color: var(--color-text);
+    position: absolute;
+    top: 35px;
+    right: 30px;
 }
 /* ====== Logo ========= */
 .nav .logo a{
@@ -64,6 +70,7 @@ i.fa-bars{
     display: flex;
     align-items: center;
     margin-left: 150px;
+    transition: 0.5s;
 }
 .nav ul li{
     margin: 0 15px;
@@ -289,156 +296,115 @@ i.fa-bars{
 
 
 /* ============= responsive ============= */
-@media (max-width:1199px){
-    .nav{
-        display: inline-block;
-        /* background-color: green; */
-        align-items: center;
+@media only screen and (min-width : 320px) {
+        
+}
 
+@media only screen and (min-width:480px) {
+    /* tampilan hanphone */ 
+}
+
+@media only screen and (min-width:600px){
+    /* tampilan tablet */
+    .title{
+        font-size: 17px;
     }
+    .title::after{
+        width: 40px;
+        height: 3px;
+        bottom:0;
+    }
+    .container .about-content h4{
+        font-size: 14px;
+    }
+    .container{
+        margin-top: 35px;
+    }
+    .container .about-content .about-paragraf{
+        font-size: 13px;
+        width: 90%;
+    }
+    .container .about-content .about-detail{
+        line-height: 1.5;
+        gap: 4px;
+        width: 90%;
+        padding: 5px;
+    }
+    .container .about-content .about-detail span{
+        font-size: 13px;
+    }
+    .container .about-content .about-detail p{
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width:992px){
+    /* ini tampilan leptop */
+    .title{
+        font-size: 17px;
+    }
+    .title::after{
+        width: 40px;
+        height: 3px;
+        bottom:0;
+    }
+    .container .about-content h4{
+        font-size: 14px;
+    }
+    .container{
+        margin-top: 35px;
+    }
+    .container .about-content .about-paragraf{
+        font-size: 14px;
+        width: 90%;
+    }
+    .container .about-content .about-detail{
+        line-height: 1.5;
+        gap: 4px;
+        width: 90%;
+        padding: 20px;
+    }
+    .container .about-content .about-detail span{
+        font-size: 16px;
+    }
+    .container .about-content .about-detail p{
+        font-size: 16px;
+    }
+    .title{
+        color: white;
+        font-size: 30px;
+        position: relative;
+    }
+    .title::after{
+        width: 150px;
+        height: 3px;
+        bottom:0;
+    }
+    
+}
+@media only screen and (max-width:1200px){
+    .nav .btn{
+        display: none;
+    }
+}
+@media only screen and (max-width:1194px){
     .nav ul{
         display: block;
         position: absolute;
         right: 0;
-        top: 60px;
-
+        top: 100px;
+        transform: translateX(150%);
+        background:rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(1rem);
+        border-radius: 10px;
     }
     .nav ul li{
-        display: none;
+        text-align: center;
     }
-    .nav .btn{
-        display: none;
+    .nav-link.on{
+        transform: translateX(-5%);
     }
     i.fa-bars{
         display: block;
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        color: var(--color-text);
     }
-    .service-card{
-        line-height: 1.5;
-    }
-    .service-card .service-cardItem{
-        height: 300px;
-    }
-}
-@media (max-width:991px){
-    .container{
-        
-    height: 100%;
-    }
-
-    .container .about-content .about-detail{
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        padding: 5px;
-    }
-}
-@media (max-width:767px){
-    .container .about-content .about-detail{
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        padding: 5px;
-        line-height: 1.5;
-    }
-    .service .service-cardItem{
-        margin-top: 20px;
-        padding: 15px 20px;
-        height: 250px;
-    }
-    .service .service-cardItem h3
-    {
-        font-size: 16px;
-    }
-    .service .service-cardItem p{
-        font-size: 13px;
-    }
-    .service .service-cardItem i{
-        color: var(--color-text);
-        font-size: 20px;
-    }
-}
-
-@media (max-width:480px){
-    .nav .logo a{
-        font-size: 2rem;
-    }
-    .nav .logo a span{
-        font-size: 2.5rem;
-    }
-    .main .main-img{
-        width: 200px;
-        height: 200px;
-    }
-    .main .main-text{
-        color: white;
-    }
-    .main .main-text h1{
-        font-size: 25px;
-    }
-    .main .main-text span{
-        letter-spacing: 1px;
-    }
-    .about{
-        height: 100vh;
-        /* background-color: green; */
-        display: flex;
-        padding-top: 30px;
-        align-items: center;
-        justify-content: center;
-        background-color: rgb(30,33,49);
-        position: relative;
-    }
-    .container{
-        align-items: center;
-        /* background-color: yellow; */
-        height: 80%;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-    }
-    .container .about-img{
-        display: none;
-    }
-    .container .about-content{
-        line-height: 1.5;
-        position: relative;
-        height: 100%;
-        /* background-color: green; */
-    }
-    .container .about-content .about-paragraf{
-        margin-top: 20px;
-        color:white;
-        font-size: 12px;
-        width: 100%;
-    }
-    .container .about-content .about-detail{
-        margin-top: 10px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        color: white;
-        width: 100%;
-        line-height: 1.5;
-        padding: 20px;
-        margin-bottom: 30px;
-    }
-    .container .about-content .about-detail span{
-        font-weight: 600;
-    }
-    .container .about-content .about-detail p{
-        font-weight: 300;
-    }
-    .container .about-content .btn{
-        background-color: var(--color-text);
-        padding: 10px 20px;
-        color: white;
-        border: 2px solid var(--color-text);
-    }
-    .container .about-content .btn:hover{
-        background-color: transparent;
-        color: var(--color-text);
-        font-weight: 700;
-    }
-
 }

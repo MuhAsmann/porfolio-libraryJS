@@ -83,3 +83,10 @@ function activeMenu(){
 }
 activeMenu();
 window.addEventListener("scroll", activeMenu);
+
+
+const toggle = document.querySelector(".fa-bars");
+
+toggle.addEventListener("click",function () {
+  nav.classList.toggle("on");
+})
