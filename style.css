@@ -24,6 +24,7 @@ section{
     /* background-repeat: no-repeat; */
     backdrop-filter: blur;
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -264,7 +265,8 @@ i.fa-bars{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    overflow: hidden;
 }
 .service-content h4{
     color: var(--color-text);
@@ -297,8 +299,84 @@ i.fa-bars{
 
 
 /* ============= responsive ============= */
-@media only screen and (min-width : 320px) {
-        
+@media only screen and (min-width : 320px) and (max-width : 600px) {
+    .main .main-img{
+        width: 150px;
+        height: 150px;
+    }
+    .main .main-text h1{
+        font-size: 25px;
+    }
+    .main .main-text span{
+        letter-spacing: 2px;
+    }
+    .title{
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .title::after{
+        width: 40px;
+        height: 3px;
+        bottom:0;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .container .about-img{
+        /* background-color: red; */
+        display: none;
+    }
+    .container .about-content{
+        line-height: 1.6;
+    }
+    .container .about-content .about-paragraf{
+        font-size: 13px;
+        width: 90%;
+    }
+    .container .about-content .about-detail{
+        line-height: 1.1;
+        gap: 4px;
+        width: 100%;
+        padding: 5px;
+        margin-top: 20px;
+    }
+    .container .about-content .about-detail span{
+        font-size: 13px;
+    }
+    .container .about-content .about-detail p{
+        font-size: 13px;
+    }
+    .container-fix{
+        margin-top: 50px;
+    }
+    .service-card{
+        flex-direction: column;
+    }
+    /* .service-card{
+        display: flex;
+        gap: 20px;
+        line-height: 1.7;
+    } */
+    .service .service-cardItem{
+        margin-top: 5px;
+        border: 2px solid var(--color-text);
+        padding: 10px 20px;
+        height: 150px;
+        border-radius: 10px;
+    }
+    .service .service-cardItem i{
+        display: none;
+    }
+    .service .service-cardItem h3{
+        color: white;
+        font-size: 16px;
+    
+    }
+    .service .service-cardItem p{
+        color: white;
+        font-size: 12px;
+    }
+
 }
 
 @media only screen and (min-width:480px) {
@@ -306,8 +384,15 @@ i.fa-bars{
 
 }
 
-@media only screen and (min-width:600px){
+@media only screen and (min-width:600px) and (max-width:991px){
     /* tampilan tablet */
+    .main .main-img{
+        width: 250px;
+        height: 250px;
+    }
+    .main .main-text h1{
+        font-size: 50px;
+    }
     .title{
         font-size: 17px;
     }
@@ -315,6 +400,9 @@ i.fa-bars{
         width: 40px;
         height: 3px;
         bottom:0;
+    }
+    .container{
+        grid-template-columns: 1fr 2fr;
     }
     .container .about-content h4{
         font-size: 14px;
@@ -332,11 +420,18 @@ i.fa-bars{
         width: 100%;
         padding: 5px;
     }
+    .container .about-img{
+        /* background-color: red; */
+        display: inline-block;
+    }
     .container .about-content .about-detail span{
         font-size: 13px;
     }
     .container .about-content .about-detail p{
         font-size: 13px;
+    }
+    .service-card{
+        flex-direction: row;
     }
     .service .service-cardItem{
         margin-top: 20px;
